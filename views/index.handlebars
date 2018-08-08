@@ -1,0 +1,38 @@
+<h1>EAT DA BURGER!!!!</h1>
+
+<h2>Yummy Yummy Burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless burgers}}
+      {{> burgers/burger-block ranch=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Gross Burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if ranch}}
+      {{> burgers/burgers-block ranch=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Your Own Burger!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="sleepy">Yummy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Hello!<br>
+    <input type="radio" name="sleepy" value="0"> Goodbye!
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
