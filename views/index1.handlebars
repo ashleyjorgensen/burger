@@ -1,0 +1,71 @@
+
+{{!-- <h1>EAT DA BURGER!!!!</h1>
+
+<h2>Yummy Yummy Burgers!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless burgers}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+{{!-- <h2>Gross Burgers!</h2> --}}
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burgers-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Your Own Burger!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="sleepy">Yummy?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Hello!<br>
+    <input type="radio" name="devoured" value="0"> Goodbye!
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form> --}}
+
+
+{{!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center" id="top-bar">
+      <h1>Eat da Burger!!!</h1>
+    </div>
+    <div class="col-xs-6 text-center" class="task">
+      <div class="row">
+        {{#each burger_data}}
+          {{#unless this.devoured}}
+        <div class="col-xs-6 text-center">
+            <pre>{{this.id}}. {{this.burger_name}}</pre>
+        </div>
+      <div class="col-xs-3" text-center"> --}}
+
+
+        {{!-- <form method= "POST" action="/burgers/update?_method=PUT"
+        class="button-size">
+          <input type="hidden" name+"burger_id" type="text"
+          value={{this.id}}>
+          <br>
+          <button type="submit" class="btn btn-default">
+            Devour!</button>
+        </form>
+      </div>
+      {{/unless}}
+      {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

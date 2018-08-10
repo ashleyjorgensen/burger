@@ -1,24 +1,30 @@
+
+
 <h1>EAT DA BURGER!!!!</h1>
 
 <h2>Yummy Yummy Burgers!</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#unless burgers}}
-      {{> burgers/burger-block ranch=true}}
+  {{#each burger_data}}
+    {{#unless devoured}}
+      {{!-- {{> burgers/burger-block devoured=true}} --}}
+
+      <button class="uneaten" data-id={{this.id}}>{{this.burger_name}}</button>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Gross Burgers!</h2>
+{{!-- <h2>Gross Burgers!</h2> --}}
 
 <ul>
-  {{#each burgers}}
-    {{#if ranch}}
-      {{> burgers/burgers-block ranch=false}}
+  {{#each burger_data}}
+    {{#if devoured}}
+      {{!-- {{> burgers/burgers-block devoured=false}} --}}
+      <div>{{this.burger_name}}</div>
     {{/if}}
   {{/each}}
 </ul>
+
 
 <h2>Add Your Own Burger!</h2>
 <form class="create-form">
@@ -29,10 +35,25 @@
   </div>
 
   <div class="form-group">
-    <label for="sleepy">Yummy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Hello!<br>
-    <input type="radio" name="sleepy" value="0"> Goodbye!
+    {{!-- <label for="devoured">Yummy?</label><br> --}}
+    {{!-- <input type="radio" name="devoured" value="1" checked> Hello!<br>
+    <input type="radio" name="devoured" value="0"> Goodbye! --}}
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  
+</form> 
+
+<button id="add-burger">Add Burger</button>
+
+
+
+
+
+
+
+
+
+
+
+
+

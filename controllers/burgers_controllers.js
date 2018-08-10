@@ -9,14 +9,21 @@ var burgers = require("../models/burger.js")
 
 // Setting up the router functions to connect to our app
 router.get("/", function (req, res) {
-    burgers.selectAll(function (data) {
-        var hbsObject = {
-            burgers: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
-    });
-});
+    burgers.all(function (burger_data) {
+        console.log(burger_data);
+        res.render("index",{burger_data});
+    })
+})
+
+//         var hbsObject = {
+//             burgers: data
+//         };
+//         console.log(hbsObject);
+//         res.render("index", hbsObject);
+//         console.log("requesting burgers");
+//         res.sendStatus(200);
+//     });
+// });
 
 router.post("/burgers", function (req, res) {
     burgers.create([
