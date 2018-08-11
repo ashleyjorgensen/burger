@@ -2,9 +2,7 @@
 
 <h1>EAT DA BURGER!!!!</h1>
 
-<h2>Yummy Yummy Burgers!</h2>
-
-<ul>
+<ul id="devoured">
   {{#each burger_data}}
     {{#unless devoured}}
       {{!-- {{> burgers/burger-block devoured=true}} --}}
@@ -14,9 +12,7 @@
   {{/each}}
 </ul>
 
-{{!-- <h2>Gross Burgers!</h2> --}}
-
-<ul>
+<ul id="notdevoured">
   {{#each burger_data}}
     {{#if devoured}}
       {{!-- {{> burgers/burgers-block devoured=false}} --}}
@@ -26,7 +22,7 @@
 </ul>
 
 
-<h2>Add Your Own Burger!</h2>
+<h2 id="ownburger">Add Your Own Burger!</h2>
 <form class="create-form">
 
   <div class="form-group">
